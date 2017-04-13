@@ -65,8 +65,8 @@ public:
     }
     
     /**
-     * @brief Sets all margins around chart at once.
-     * @param margin - size of margin in pixels
+     * @brief Sets all margins around chart.
+     * @param margin
      */
     void SetMargin(wxCoord margin)
     {
@@ -92,8 +92,8 @@ public:
     }
     
     /**
-     * @brief Sets time step and resets dataset.
-     * @param timeStep - time step in seconds
+     * @brief Sets time step and reset dataset.
+     * @param timeStep - time step at seconds
      */
     void SetTimeStep(double timeStep)
     {
@@ -104,7 +104,7 @@ public:
     }
     
     /**
-     * @brief Sets count values of history and reset dataset.
+     * @brief Sets count values of history and reset dataset
      * @param countValues
      */
     void SetCountValues(unsigned int countValues)
@@ -119,7 +119,7 @@ public:
     
     /**
      * @brief Sets automatic range for y axis.
-     * @param true for automatic
+     * @param choice - true for automatic
      */
     void SetAutoRange(bool choice)
     {
@@ -201,18 +201,17 @@ protected:
 
     /**
      * @brief Calculates new range of values for y axis, if it is small or too big.
-     * @see SetAutoRange
      */
     void AutoRange();
     
     /**
-     * @brief Shifts timeline x of m_timeStep.
+     * @brief shifts value of timeline x of m_timeStep.
      * @see SetTimeStep
      */
     void ShiftTimeline();
     
     /**
-     * @brief Frees dataset from m_data.
+     * @brief Free dataset from m_data.
      */
     void FreeDataset();
     
@@ -228,7 +227,7 @@ protected:
     void AutoLabelCount(wxGraphicsContext &gc, wxRect rect);
    
     /**
-     * @brief Prepares list of ranks number of labels.
+     * @brief Prepared list of ranks number of labels.
      */
     void PrepareNumLabels();
     

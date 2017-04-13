@@ -34,7 +34,7 @@ public:
     ~AppMonitorOutputView();
 
     /**
-     * @brief Starts monitor process with the PID.
+     * @brief Starts monitor process with PID.
      * @param PID - PID monitored process
      */
     void StartMonitor(int PID);

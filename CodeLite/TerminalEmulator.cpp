@@ -36,8 +36,6 @@ public:
             m_parent->AddPendingEvent(terminateEvent);
             m_parent->m_pid = wxNOT_FOUND;
 
-
-
             std::list<wxProcess*>::iterator iter = std::find_if(m_parent->m_myProcesses.begin(),
                                                                 m_parent->m_myProcesses.end(),
                                                                 [&](wxProcess* proc) { return proc == this; });

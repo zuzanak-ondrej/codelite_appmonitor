@@ -33,8 +33,8 @@ public:
 
     /**
      * @brief Sets pen and filling colour to draw graph.
-     * @param pen for drawing the top edge of chart
-     * @param colour for drawing filling
+     * @param wxPen pen
+     * @param wxColour colour
      */
     void SetGraphPen(wxPen pen, wxColour colour)
     {
@@ -50,7 +50,7 @@ public:
 
     /**
      * @brief Sets filling curve.
-     * @param true for filling
+     * @param bool choice - true = filling
      */
     void SetFilling(bool choice)
     {
@@ -58,8 +58,8 @@ public:
     }
     
     /**
-     * @brief Sets lenght step for one value on axis x.
-     * @param step
+     * @brief Sets lenght step for one value on x axis.
+     * @param double step
      */
     void SetXStep(double step)
     {
@@ -68,10 +68,10 @@ public:
 
     /**
      * @brief Draws dataset as graph.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
-     * @param horizAxis - horizontal axis for placement values
-     * @param vertAxis - vertical axis for placement values
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
+     * @param Axis horizAxis - horizontal axis for placement values
+     * @param Axis vertAxis - vertical axis for placement values
      * @see Axis
      */
     void Draw(wxGraphicsContext &dc, wxRect rc, Axis *horizAxis, Axis *vertAxis);
@@ -83,7 +83,7 @@ private:
      * @brief Returns rank of first visible value.
      * @param Axis horizAxis - horizontal axis for placement values
      * @param Axis vertAxis - vertical axis for placement values
-     * @return rank of value
+     * @return unsigned int
      */
     unsigned int GetFirstVisibleIndex(Axis *horizAxis, Axis *vertAxis);
 

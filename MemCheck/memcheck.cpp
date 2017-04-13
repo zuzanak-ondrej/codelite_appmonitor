@@ -399,11 +399,13 @@ void MemCheckPlugin::CheckProject(const wxString& projectName)
     ProjectPtr project = m_mgr->GetWorkspace()->FindProjectByName(projectName, errMsg);
     wxString path = project->GetFileName().GetPath(wxPATH_GET_VOLUME | wxPATH_GET_SEPARATOR);
 
+	EnvSetter envGuard(m_mgr->GetEnv());
+	
     wxString wd;
     wxString command = m_mgr->GetProjectExecutionCommand(projectName, wd);
 
     DirSaver ds;
-    EnvSetter envGuard(m_mgr->GetEnv());
+    //EnvSetter envGuard(m_mgr->GetEnv());
     wxSetWorkingDirectory(path);
     wxSetWorkingDirectory(wd);
     m_mgr->AppendOutputTabText(kOutputTab_Output, _("Launching MemCheck...\n"));

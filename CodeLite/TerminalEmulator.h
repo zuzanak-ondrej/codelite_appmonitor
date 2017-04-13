@@ -41,15 +41,15 @@ class MyProcess;
 class WXDLLIMPEXP_CL TerminalEmulator : public wxEvtHandler
 {
     IProcess* m_process;
+    long m_pid;
     friend class MyProcess;
     std::list<wxProcess*> m_myProcesses;
 
 protected:
     void OnProcessTerminated(clProcessEvent& event);
     void OnProcessOutput(clProcessEvent& event);
-    long m_pid;
+
 public:
-    
     TerminalEmulator();
     virtual ~TerminalEmulator();
 

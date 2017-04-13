@@ -40,7 +40,7 @@ protected:
     virtual void OnCancel( wxCommandEvent& event );
     
     /**
-     * @brief Save settings and closes window.
+     * @brief Save settings.
      * @param event
      */
     virtual void OnSave(wxCommandEvent& event);
@@ -78,7 +78,7 @@ protected:
     bool CheckFileName(wxFileName fileName);
     
     /**
-     * @brief Checks command to content of specifiers. Command looks for offspring of running terminal.
+     * @brief Checks command to content of specifiers.
      * @param cmd - command to capture PID process in command line
      * @return true if command is ok
      */

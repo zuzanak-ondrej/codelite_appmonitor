@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeLite_Project Name="ExternalTools">
+<CodeLite_Project Name="ExternalTools" Version="10.0.0">
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00040001N0015WinDebugUnicode0000000000000001N0011WinDebug_290000000000000001N0013WinRelease_290000000000000001N0013Win_x64_Debug000000000000]]>

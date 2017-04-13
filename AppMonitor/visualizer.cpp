@@ -187,7 +187,6 @@ void Visualizer::Start(int PID, IManager *mgr)
     {
         m_mgr = mgr;
         m_PID = PID;
-
         Reset();
         PrepareFileForLog();
         

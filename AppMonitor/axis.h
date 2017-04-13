@@ -32,7 +32,7 @@ class Axis
 {
 public:
     /**
-     * @param location - position of axis - AXIS_LOCATION
+     * @param AXIS_LOCATION location
      */
     Axis(AXIS_LOCATION location);
     ~Axis();
@@ -64,9 +64,9 @@ public:
     }
 
     /**
-     * @brief Sets bounds of axis. Recalculates label Interval based on label count.
-     * @param minValue - minimal displayed value on axis
-     * @param maxValue - maximal displayed value on axis
+     * @brief Sets bounds on axis. Recalculates label Interval based on label count.
+     * @param double minValue - minimum displayed value on axis
+     * @param double maxValue - maximum displayed value on axis
      * @see SetLabelCount
      */
     void SetBounds(double minValue, double maxValue)
@@ -77,9 +77,9 @@ public:
     }
     
     /**
-     * @brief Gets bounds of axis.
-     * @param minValue - minimal displayed value on axis
-     * @param maxValue - maximal displayed value on axis
+     * @brief Gets bounds on axis.
+     * @param double &minValue - minimum displayed value on axis
+     * @param double &maxValue - maximum displayed value on axis
      */
     void GetBounds(double &minValue, double &maxValue)
     {
@@ -88,7 +88,7 @@ public:
     }
     
     /**
-     * @brief Gets minimal value on axis.
+     * @brief Gets minimum value on axis.
      */
     double GetMinValue()
     {
@@ -96,7 +96,7 @@ public:
     }
 
     /**
-     * @brief Gets maximal value on axis.
+     * @brief Gets maximum value on axis.
      */
     double GetMaxValue()
     {
@@ -104,8 +104,8 @@ public:
     }
     
     /**
-     * @brief Sets maximum of values on axis. Recalculates label Interval based on label count.
-     * @param maxValue - maximal displayed value on axis
+     * @brief Sets maxim value on axis. Recalculates label Interval based on label count.
+     * @param double maxValue - maximum displayed value on axis
      * @see SetLabelCount
      */
     void SetMaxValue(double maxValue)
@@ -115,8 +115,8 @@ public:
     }
     
     /**
-     * @brief Sets count of labels. Recalculated value for label interval.
-     * @param labelCount - count of labels
+     * @brief Sets count of labels. Calculated value for label interval.
+     * @param size_t labelCount - labelCount count of labels
      */
     void SetLabelCount(size_t labelCount)
     {
@@ -134,7 +134,7 @@ public:
     
     /**
      * @brief Sets label interval. Recalculates value for label count.
-     * @param labelInterval - label interval
+     * @param double labelInterval - label interval
      * @see SetBounds, SetMaxValue
      */
     void SetLabelInterval(double labelInterval)
@@ -146,8 +146,8 @@ public:
     /**
      * Sets minimal/maximal margins for axis.
      * Eg bottom for vertical axes, left for horizontal.
-     * @param marginMin - new minimal margin
-     * @param marginMax - new maximal margin
+     * @param wxCoord marginMin - new minimal margin
+     * @param wxCoord marginMax - new maximal margin
      */
     void SetMargins(wxCoord marginMin, wxCoord marginMax)
     {
@@ -157,7 +157,7 @@ public:
     
     /**
      * @brief Sets pen to draw grid.
-     * @param pen
+     * @param wxPen pen
      */
     void SetGridLinesPen(wxPen pen)
     {
@@ -166,7 +166,7 @@ public:
 
     /**
      * @brief Sets axis title.
-     * @param title - new axis title
+     * @param wxString &title - new axis title
      */
     void SetTitle(const wxString &title)
     {
@@ -175,7 +175,7 @@ public:
     
     /**
      * @brief Returns axis title.
-     * @return wxString - text of axis title
+     * @return wxString - axis title
      */
     const wxString &GetTitle()
     {
@@ -183,11 +183,11 @@ public:
     }
     
     /**
-     * Sets new location for axis title,
+     * New location for axis title,
      * acceptable values wxLEFT, wxCENTER, wxRIGHT for horizontal axes,
      * wxTOP, wxCENTER, wxBOTTOM for vertical axes.
      * @brief Sets axis title location. 
-     * @param location - wxLEFT, wxCENTER, wxRIGHT, wxTOP, wxCENTER, wxBOTTOM
+     * @param int location - wxLEFT, wxCENTER, wxRIGHT, wxTOP, wxCENTER, wxBOTTOM
      */
     void SetTitleLocation(int location)
     {
@@ -196,7 +196,7 @@ public:
     
     /**
      * @brief Returns axis title location.
-     * @return wxLEFT, wxCENTER, wxRIGHT, wxTOP, wxCENTER, wxBOTTOM
+     * @return int - wxLEFT, wxCENTER, wxRIGHT, wxTOP, wxCENTER, wxBOTTOM
      */
     int GetTitleLocation()
     {
@@ -205,7 +205,7 @@ public:
     
     /**
      * @brief Sets new axis title font.
-     * @param font - axis title font
+     * @param wxFont &font - axis title font
      */
     void SetTitleFont(wxFont &font)
     {
@@ -214,7 +214,7 @@ public:
     
     /**
      * @brief Returns axis title font.
-     * @return axis title font
+     * @return wxFont - axis title font
      */
     const wxFont &GetTitleFont()
     {
@@ -223,7 +223,7 @@ public:
 
     /**
      * @brief Sets new axis title colour.
-     * @param colour - axis title colour
+     * @param wxColour &colour - axis title colour
      */
     void SetTitleColour(wxColour &colour)
     {
@@ -232,7 +232,7 @@ public:
     
     /**
      * @brief Returns axis title colour.
-     * @return axis title colour
+     * @return wxColour - axis title colour
      */
     wxColour GetTitleColour()
     {
@@ -240,8 +240,8 @@ public:
     }
 
     /**
-     * @brief Sets new pen for labels of lines.
-     * @param labelPen - pen for labels of lines
+     * @brief Sets new pen for label lines.
+     * @param wxPen labelPen - pen for label lines
      */
     void SetLabelPen(wxPen labelPen)
     {
@@ -250,7 +250,7 @@ public:
     
     /**
      * @brief Sets new colour for labels.
-     * @param labelTextColour - color for labels
+     * @param wxColour labelTextColour - color for labels
      */
     void SetLabelTextColour(wxColour labelTextColour)
     {
@@ -258,8 +258,8 @@ public:
     }
 
     /**
-     * @brief Returns labels colour.
-     * @return labels colour
+     * @brief Returns label colour.
+     * @return wxColour - label colour
      */
     wxColour GetLabelTextColour()
     {
@@ -268,7 +268,7 @@ public:
     
     /**
      * @brief Sets label gap from axis.
-     * @param labelGap - in pixels
+     * @param int labelGap - in pixels
      */
     void SetLabelGap(int labelGap)
     {
@@ -277,7 +277,7 @@ public:
     
     /**
      * @brief Sets label line length.
-     * @param labelLineSize - label line length in pixels
+     * @param int labelLineSize - label line length in pixels
      */
     void SetLabelLineSize(int labelLineSize)
     {
@@ -286,7 +286,7 @@ public:
     
     /**
      * @brief Sets format string for labels. Default is "%.2f".
-     * @param labelFormat - format string
+     * @param wxString &labelFormat - format string
      */
     void SetLabelFormat(const wxString &labelFormat)
     {
@@ -295,7 +295,7 @@ public:
     
     /**
      * @brief Sets new font for labels text.
-     * @param labelTextFont - font for labels text
+     * @param wxFont labelTextFont - font for labels text
      */
     void SetLabelTextFont(wxFont labelTextFont)
     {
@@ -304,7 +304,7 @@ public:
 
     /**
      * @brief Returns label font.
-     * @return label font
+     * @return wxFont& - label font
      */
     const wxFont& GetLabelTextFont()
     {
@@ -313,7 +313,7 @@ public:
 
     /**
      * @brief Sets whether to draw labels text vertical.
-     * @param verticalLabelText - true to draw labels text vertical
+     * @param bool verticalLabelText - true to draw labels text vertical
      */
     void SetVerticalLabelText(bool verticalLabelText)
     {
@@ -322,7 +322,7 @@ public:
     
     /**
      * @brief Sets whether to draw title text vertical. Valid only for AXIS_LEFT axis.
-     * @param verticalTitleText - true to draw title text vertical
+     * @param bool verticalTitleText - true to draw title text vertical
      */
     void SetVerticalTitleText(bool verticalTitleText)
     {
@@ -331,84 +331,84 @@ public:
 
     /**
      * @brief Draws label on calculated place.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
-     * @param label
-     * @param value - value for location in graph
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
+     * @param wxString label
+     * @param double value - value for location in graph
      */
     void DrawLabel(wxGraphicsContext &gc, wxRect rc, const wxString &label, double value);
     
     /**
      * @brief Draws all labels in range.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
      */
     void DrawLabels(wxGraphicsContext &gc, wxRect rc);
 
     /**
      * @brief Draws line on axis side.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
      */
     void DrawBorderLine(wxGraphicsContext &gc, wxRect rc);
 
     /**
      * @brief Draws grid lines into graph.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
      */
     void DrawGridLines(wxGraphicsContext &gc, wxRect rc);
 
     /**
      * @brief Draws tittle.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
+     * @param xGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
      */
     void DrawTittle(wxGraphicsContext &gc, wxRect rc);
 
     /**
      * @brief Draws all components.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
+     * @param xGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
      */
     void Draw(wxGraphicsContext &gc, wxRect rc);
 
     /**
      * @brief Returns value on step.
-     * @param step - label number
-     * @return value on step
+     * @param size_t step - label number
+     * @return double - value on step
      */
     double GetValue(size_t step);
     
     /**
      * @brief Checks whether data value is visible.
-     * @param value - value in data space
-     * @return true if data value is visible
+     * @param double value - value in data space
+     * @return bool - true if data value is visible
      */
     bool IsVisible(double value);
     
     /**
      * @brief Calculates area for curve.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param rc - area for rendering
-     * @param rcData - area for curve
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param wxRect rc - area for rendering
+     * @param wxRect &rcData - area for curve
      */
     void CalcDataArea(wxGraphicsContext &gc, wxRect rc, wxRect &rcData);
     
     /**
      * @brief Returns Longest label on axis.
-     * @param gc - active wxGraphicsContext for rendering
-     * @return length of label
+     * @param wxGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @return wxSize - length of label
      */
     wxSize GetLongestLabelExtent(wxGraphicsContext &gc);
     
     /**
-     * @brief Calculates position on graph for value.
-     * @param gc - active wxGraphicsContext for rendering
-     * @param minCoord
-     * @param gRange
-     * @param value
-     * @return position
+     * @brief Calculates position on panel for value.
+     * @param xGraphicsContext &gc - active wxGraphicsContext for rendering
+     * @param int minCoord
+     * @param int gRange
+     * @param double value
+     * @return wxCoord
      */
     wxCoord ToGraphics(wxGraphicsContext& WXUNUSED(gc), int minCoord, int gRange, double value);  
     
@@ -416,15 +416,15 @@ protected:
 
     /**
      * @brief Returns true if step of labels is final.
-     * @param step - label number
+     * @param size_t step - label number
      * @return bool
      */
     bool IsEnd(size_t step);
 
     /**
      * @brief Returns label for current step.
-     * @param step - label number
-     * @param string label
+     * @param size_t step - label number
+     * @param wxString &label
      */
     void GetLabel(size_t step, wxString &label);
 

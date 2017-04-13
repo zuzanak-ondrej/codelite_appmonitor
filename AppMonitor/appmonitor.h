@@ -34,30 +34,30 @@ public:
     virtual clToolBar *CreateToolBar(wxWindow *parent);
     
     /**
-     * @brief Adds plugin menu to the "Plugins" menu item in the menu bar.
+     * @brief Add plugin menu to the "Plugins" menu item in the menu bar
      */
     virtual void CreatePluginMenu(wxMenu *pluginsMenu);
     
     /**
-     * @brief Unplugs the plugin. Perform here any cleanup needed (e.g. unbind events, destroy allocated windows)
+     * @brief Unplug the plugin. Perform here any cleanup needed (e.g. unbind events, destroy allocated windows)
      */
     virtual void UnPlug();
     
     /**
-     * @brief Stops the current running process using SIGTERM.
+     * @brief stop the current running process using SIGTERM
      */
     void StopProcess();
     
     /**
-     * @brief Returns true if test is not runnging and GUI can respond.
+     * @brief true if test is not runnging and GUI can respond
      * @param event
      * @return Plugin status.
      */
     bool IsReady(wxUpdateUIEvent& event);
         
     /**
-     * @brief Returns true if monitoring is currently running.
-     * @return true if running
+     * @brief return true if a test is currently running
+     * @return
      */
     bool IsRunning() const
     {
@@ -104,7 +104,7 @@ protected:
     void OnStopProcessUI(wxUpdateUIEvent& event);
     
     /**
-     * @brief Starts active project and monitor.
+     * @brief Starts monitoring.
      * @param projectName
      */
     void CheckProject(const wxString& projectName);

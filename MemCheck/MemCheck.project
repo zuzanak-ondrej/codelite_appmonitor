@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeLite_Project Name="MemCheck">
+<CodeLite_Project Name="MemCheck" Version="10.0.0">
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00030001N0012DebugUnicode0000000000000001N0015WinDebugUnicode0000000000000001N0017WinReleaseUnicode000000000000]]>

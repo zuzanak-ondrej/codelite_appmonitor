@@ -263,11 +263,11 @@ void AppMonitor::CheckProject(const wxString& projectName)
     
     
     wxString workingDir;
-    wxString command_pre = m_mgr->GetProjectExecutionCommand(projectName, workingDir);
+    wxString command2 = m_mgr->GetProjectExecutionCommand(projectName, workingDir);
 #ifdef __WXMSW__ // Windows;
-    wxString command = wxString() << "\"" << command_pre << "\"";
+    wxString command = wxString() << "\"" << command2 << "\"";
 #else
-    wxString command = command_pre;
+    wxString command = command2;
 #endif
     
     DirSaver ds;
