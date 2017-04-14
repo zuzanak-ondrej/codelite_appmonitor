@@ -1808,6 +1808,7 @@ resources.cpp: resources.xrc
     <Project Name="AutoSave"/>
     <Project Name="Tail"/>
     <Project Name="EditorConfigPlugin"/>
+	<Project Name="AppMonitor"/>
   </Dependencies>
   <Dependencies Name="CMake_Debug">
     <Project Name="wxscintilla"/>
@@ -2004,6 +2005,7 @@ resources.cpp: resources.xrc
     <Project Name="AutoSave"/>
     <Project Name="Tail"/>
     <Project Name="EditorConfigPlugin"/>
+	<Project Name="AppMonitor"/>
   </Dependencies>
   <Dependencies Name="Win_x64_Release">
     <Project Name="wxscintilla"/>
@@ -2050,6 +2052,7 @@ resources.cpp: resources.xrc
     <Project Name="AutoSave"/>
     <Project Name="Tail"/>
     <Project Name="EditorConfigPlugin"/>
+	<Project Name="AppMonitor"/>
   </Dependencies>
   <Dependencies Name="Win_x86_Release">
     <Project Name="PCH"/>
@@ -2092,5 +2095,6 @@ resources.cpp: resources.xrc
     <Project Name="AutoSave"/>
     <Project Name="EditorConfigPlugin"/>
     <Project Name="Tail"/>
+	<Project Name="AppMonitor"/>
   </Dependencies>
 </CodeLite_Project>
