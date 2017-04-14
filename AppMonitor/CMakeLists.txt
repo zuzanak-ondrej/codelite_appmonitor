@@ -19,8 +19,7 @@ include_directories("${CL_SRC_ROOT}/Plugin"
                     "${CL_SRC_ROOT}/sdk/wxsqlite3/include" 
                     "${CL_SRC_ROOT}/CodeLite" 
                     "${CL_SRC_ROOT}/PCH" 
-                    "${CL_SRC_ROOT}/Interfaces"
-                    "${CMAKE_CURRENT_SOURCE_DIR}/os/linux")
+                    "${CL_SRC_ROOT}/Interfaces")
 
 add_definitions(-DWXUSINGDLL_WXSQLITE3)
 add_definitions(-DWXUSINGDLL_CL)
