@@ -40,6 +40,14 @@ if ( APPLE )
     add_definitions(-fPIC)
 endif()
 
+if (UNIX)
+    file(GLOB SIGAR_OS_SOURCES "os/linux/*.*")
+elseif (WIN32)
+    file(GLOB SIGAR_OS_SOURCES "os/win32/*.*")
+endif ()
+
+file(COPY ${SIGAR_OS_SOURCES} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
+
 FILE(GLOB SRCS "*.cpp" "*.c")
 
 # Define the output
